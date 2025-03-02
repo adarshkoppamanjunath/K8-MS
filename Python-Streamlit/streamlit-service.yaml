@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pythonstreamlit-service-internal
+  namespace: fastapi-namespace  # Ensure the namespace is correct
+spec:
+  selector:
+    app: streamlit  # Fixed the label here
+  ports:
+    - protocol: TCP
+      port: 80        # Exposing internal port as 80
+      targetPort: 8501  # Target container port
+  type: ClusterIP     # Internal service type
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: pythonstreamlit-service-external
+spec:
+  selector:
+    app: streamlit  # Fixed the label here as well
+  ports:
+    - protocol: TCP
+      port: 8501     # External port accessible from outside the cluster
+      targetPort: 8501  # Target container port
+  type: LoadBalancer  # External service type

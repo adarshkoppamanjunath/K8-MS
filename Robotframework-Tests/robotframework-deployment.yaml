@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: robotframework-test
+  namespace: fastapi-namespace
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: robotframework
+  template:
+    metadata:
+      labels:
+        app: robotframework
+    spec:
+      containers:
+        - name: robotframework
+          image:  docker.io/adarsh247/robotframewrktest:latest # Ensure this image exists
+          imagePullPolicy: Always
+          command: ["/bin/sh", "-c", "tail -f /dev/null"] 
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+        

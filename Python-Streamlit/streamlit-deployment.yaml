@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-deployment
+  namespace: fastapi-namespace  # Make sure this is correct
+spec:
+  replicas: 3  # Adjust number of replicas if needed
+  selector:
+    matchLabels:
+      app: streamlit
+  template:
+    metadata:
+      labels:
+        app: streamlit
+    spec:
+      containers:
+        - name: streamlit
+          image: docker.io/adarsh247/pythonstreamlit:latest  # Use the correct image
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8501
