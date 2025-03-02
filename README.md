@@ -16,11 +16,11 @@
 - kubectl port-forward service/pythonstreamlit-service-internal 8501:80 -n fastapi-namespace
 
 # How it works?
-    - [Python-Fast-APIs](https://github.com/adarshkoppamanjunath/Python-Fast-APIs)- microservice consists all backend apis inlcuding token and CRUD APIs.
-    - [Python-Streamlit](https://github.com/adarshkoppamanjunath/Python-Streamlit)- microservice include frontend which uses backend [Python-Fast-APIs](https://github.com/adarshkoppamanjunath/Python-Fast-APIs)
-    - [Robotframework-Tests](https://github.com/adarshkoppamanjunath/RobotFramework-Selenium-Requests)-microservice has API tests which whill talk to Pyhon-Fast-APIs
-    - LogIn to `http://localhost:8501/` with username `testuser` and password `secret`
-    
+- [Python-Fast-APIs](https://github.com/adarshkoppamanjunath/Python-Fast-APIs)- microservice consists all backend apis inlcuding token and CRUD APIs.
+- [Python-Streamlit](https://github.com/adarshkoppamanjunath/Python-Streamlit)- microservice include frontend which uses backend [Python-Fast-APIs](https://github.com/adarshkoppamanjunath/Python-Fast-APIs)
+- [Robotframework-Tests](https://github.com/adarshkoppamanjunath/RobotFramework-Selenium-Requests)-microservice has API tests which whill talk to Pyhon-Fast-APIs
+- LogIn to `http://localhost:8501/` with username `testuser` and password `secret`
+
 
 
 
