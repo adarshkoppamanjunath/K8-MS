@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: robot-config
+data:
+  BASE_URL: "http://fastapi-service:8000/"
+  BASE_URL_UI: "https://pythoninventory-st.streamlit.app/"
+  ADMIN_USERNAME: "testuser"
+  ADMIN_PASSWORD: "secret"
+  VIEW_USERNAME: "testuser2"
+  VIEW_PASSWORD: "secret"

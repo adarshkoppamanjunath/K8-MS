@@ -7,12 +7,13 @@
 
 # To use this locally,
 - Install docker and minikube.
-- Kubectl deploy -f namespace.yaml
-- kubectl deploy -f Python-Fast-APIs\fastapi-deployment.yaml
-- kubectl deploy -f Python-Fast-APIs\fastapi-service-internal.yaml
-- kubectl deploy -f Python-Streamlit\streamlit-deployment.yaml
-- kubectl deploy -f Python-Streamlit\streamlit-service.yaml
-- kubectl deploy -f Robotframework-Tests\robotframework-deployment.yaml
+- kubectl apply -f namespace.yaml
+- kubectl apply -f Python-Fast-APIs\fastapi-deployment.yaml
+- kubectl apply -f Python-Fast-APIs\fastapi-service-internal.yaml
+- kubectl apply -f Python-Streamlit\streamlit-deployment.yaml
+- kubectl apply -f Python-Streamlit\streamlit-service.yaml
+- kubectl apply -f Robotframework-Tests\robotframework-configmap.yaml
+- kubectl apply -f Robotframework-Tests\robotframework-deployment.yaml
 - kubectl port-forward service/pythonstreamlit-service-internal 8501:80 -n fastapi-namespace
 
 # How it works?

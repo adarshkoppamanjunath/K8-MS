@@ -16,6 +16,9 @@ spec:
       containers:
         - name: robotframework
           image:  docker.io/adarsh247/robotframewrktest:latest # Ensure this image exists
+          envFrom:
+            - configMapRef:
+                name: robot-config
           imagePullPolicy: Always
           command: ["/bin/sh", "-c", "tail -f /dev/null"] 
           resources:
